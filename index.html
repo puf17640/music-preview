@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Preview</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #0D0C0B;
+    }
+
+    .center {
+      position: absolute;
+      margin: auto;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: fit-content;
+      height: fit-content;
+    }
+
+    .cover {
+      width: 70vmin;
+      height: 70vmin;
+      background-color: #0D0C0B;
+      background-image: url('https://source.unsplash.com/random/600x600');
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin-bottom: 25px;
+      border-radius: 5px;
+      box-shadow: 0 0 35px rgba(255, 255, 255, .1);
+    }
+
+    audio {
+      filter: invert(100%);
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    audio:focus {
+      outline: none;
+    }
+
+    .credits {
+      position: absolute;
+      bottom: 25px;
+      width: 100%;
+      text-align: center;
+      font-size: 1.125rem;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    p, a:active, a:visited {
+      color: #f3e500;
+    }
+  </style>
+</head>
+<body>
+  <div class="center container">
+    <div class="cover"></div>
+    <audio controls controlsList="nodownload">
+      <source src="sound.wav">
+    </audio>
+  </div>
+  <p class="credits"><small>Eine Kooperation von <a href="https://wardanetwork.at">WARDA Network</a> und <a href="https://instagram.com/le.buff">Julian Pufler</a></small></p>
+</body>
+</html>
